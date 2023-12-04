@@ -47,7 +47,7 @@ const topLine = Bodies.rectangle(310, 120, 630, 5, {
     isStatic: true,
     isSensor: true,
     render: { fillStyle: "#E6B143" }
-  });
+  })
 
   World.add(world, [leftWall, rightWall, ground, topLine]);
 
@@ -65,7 +65,7 @@ const topLine = Bodies.rectangle(310, 120, 630, 5, {
 
     const body = Bodies.circle(300,50, fruit.radius, {
         index: index,
-        issSleeping: true,
+        isSleeping: true,
         render: {
             sprite: { texture: `${fruit.name}.png` }
         },
@@ -75,7 +75,7 @@ const topLine = Bodies.rectangle(310, 120, 630, 5, {
     currentBody = body;
     currentFruit = fruit;
 
-    World.add(world,body);
+    World.add(world, body);
   }
 
 window.onkeydown = (event) => {
@@ -89,7 +89,7 @@ window.onkeydown = (event) => {
         return;
 
      interval = setInterval(() => {
-       if (currentBody.position.x - currentFruit.radius > 30 )
+       if (currentBody.position.x - currentFruit.radius > 30)
          Body.setPosition(currentBody, {
            x: currentBody.position.x - 1,
            y: currentBody.position.y,
@@ -101,7 +101,7 @@ window.onkeydown = (event) => {
       if (interval)
         return;
         
-      interval = setInterval( () => {
+      interval = setInterval(() => {
         if (currentBody.position.x + currentFruit.radius < 590)
         Body.setPosition(currentBody, {
            x: currentBody.position.x + 1,
@@ -111,7 +111,7 @@ window.onkeydown = (event) => {
      break;
 
     case "KeyS":
-      currentBody.issSleeping = false;
+      currentBody.isSleeping = false;
       disableAction = true;
        
       setTimeout(() => {
@@ -150,7 +150,7 @@ Events.on(engine, "collisionStart", (event) => {
         newFruit.radius,
         {
           render: {
-            sprite: { texture: `${newFruit.name}.png` }
+            sprite: { texture: `${newFruit.name}.png` },
           },
           index: index + 1,
         }

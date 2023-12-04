@@ -1,0 +1,44 @@
+/* Light mode styles */
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#mode-toggle {
+    background: none; /* 배경색 없음 */
+    border: none; /* 테두리 없음 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    font-size: 24px; /* 아이콘 크기 조절 */
+    outline: none; /* 클릭 시 나타나는 윤곽선 제거 */
+    color: #000000; /* 아이콘 색상을 검정색으로 설정 */
+  }
+  
+.dark-mode {
+    background-color: #121212; /* Dark background for dark mode */
+    color: #ffffff; /* Light text for dark mode */
+  }
+  
+  /* You may need to adjust the styles for other elements as well, for example: */
+  .dark-mode header, .dark-mode footer , .dark-mode div {
+    background-color: #1A1A1A;
+    color: #ffffff;
+  }
+  
+  .dark-mode .game {
+    background-color: #2A2A2A;
+    color: #ffffff;
+  }
+  
+  /* And so on for other elements... */
+  .dark-mode {
+    background-color: #121212; /* Darker background for dark mode */
+    color: #ffffff; /* Lighter text for dark mode */
+    /* Add other styles for dark mode as needed */
+  }
+  

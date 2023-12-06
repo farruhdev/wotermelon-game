@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Games Collection</title>
+    <link rel="icon" type="image/x-icon" href="image/13.png">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -26,11 +27,16 @@
         }
         .header {
             text-align: center;
-            padding: 140px;
+            
+            padding: 120px;
             background-color: #3949ab;
             color: white;
-            width: 100%;
+            width: 75%;
+
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            font-size: 50px;
         }
         .game-list {
             display: flex;
@@ -62,7 +68,7 @@
             font-size: 48px;
             margin-bottom: 20px;
         }
-
+       
         .loader {
             border: 5px solid #f3f3f3; /* Light grey */
             border-top: 5px solid #3498db; /* Blue */
@@ -72,7 +78,15 @@
             animation: spin 2s linear infinite;
             margin: 50px auto;
         }
-        
+         
+        .anybutton {
+       top:5%;
+       left:90%;
+       width:100px;
+       height:40px;
+       position: absolute;
+       z-index: 2;
+        }
         /* 스핀 애니메이션 키프레임 */
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -86,40 +100,41 @@
     <div class="header">
         <h1>Mini Games Collection</h1>
         <p>Explore and have fun!</p>
+        <button class="anybutton" id="mode-toggle" onclick="toggleDarkMode()">🌙</button>
     </div>
     <br>
-    <button id="mode-toggle" onclick="toggleDarkMode()">🌙</button>
+    
 
 
     <script src="script.js"></script>
-    <input type="text" id="usernameInput" placeholder="Username">
-    <button onclick="saveUsername()">Save Username</button>
+    
     <div class="game-list">
-        <a href="/indexs.html">
+        
             <div class="game">
-                <div class="game-icon">🎮</div>
-                <h2>수박게임</h2>
-                <p>Adventure awaits!</p>
+                <div class="game-icon"><a href="/indexs.html"><img src="image/11.png" alt="Trulli" width="90" height="90"></a></div>
+                <h2>Suika Game</h2>
+                <p>The Suika Game is a fast-paced, fruit-merging puzzle that tests reflexes and precision.</p>
             </div>
-        </a>
-        <a href="Game2/index.html">
+        
+        
             <div class="game">
-            <div class="game-icon">🧩</div>
-            <h2>Shutting Game</h2>
-            <p>Get puzzled!</p>
+            <div class="game-icon"><a href="shotting_game/index.html"> <img src="image/3049628.png" alt="Trulli" width="90" height="90"></a></div>
+            <h2>Shotting Game</h2>
+            <p>The Shooting Game is a puzzle game that tests strategic thinking and problem-solving abilities.</p>
         </div>
-        </a>
-        <a href="game3/index.html">
+        
+        
         <div class="game">
-            <div class="game-icon">⚔️</div>
+            <div class="game-icon"><a href="memory_card/index.html"><img src="image/12.jpeg" alt="Trulli" width="90" height="90"></a></div>
             <h2>Memory card</h2>
-            <p>Battle your way!</p>
-        </div></a>
+            <p>Memory card Find the same images among the flipped cards and improve your memory</p>
+        </div>
     </div>
     <div class="loader"></div>
     <div class="introduction">
         <h2>Welcome to the Mini Games Collection!</h2>
         <p>Discover a variety of mini games that you can play right away. From puzzles and adventures to strategy and action, find your favorite game and start playing!</p>
+        <p>Copyright  © 2023 </p>
     </div>
 
     <script>
